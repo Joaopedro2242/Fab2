@@ -36,10 +36,12 @@ public class tela extends javax.swing.JFrame {
         lblImagem.setLabelFor(btnAdicionarImagem);
         lblImagem.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lblNomeMercadoria.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblNomeMercadoria.setFont(new java.awt.Font("Bauhaus 93", 0, 14)); // NOI18N
+        lblNomeMercadoria.setForeground(new java.awt.Color(45, 50, 117));
         lblNomeMercadoria.setText("Nome da Mercadoria");
 
-        lblPreço.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblPreço.setFont(new java.awt.Font("Bauhaus 93", 0, 14)); // NOI18N
+        lblPreço.setForeground(new java.awt.Color(45, 50, 117));
         lblPreço.setText("Preço");
 
         txtNomeMercadoria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -62,11 +64,13 @@ public class tela extends javax.swing.JFrame {
         txtDescrição.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jScrollPane1.setViewportView(txtDescrição);
 
-        lblDescrição.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblDescrição.setFont(new java.awt.Font("Bauhaus 93", 0, 14)); // NOI18N
+        lblDescrição.setForeground(new java.awt.Color(45, 50, 117));
         lblDescrição.setText("Descrição");
         lblDescrição.setToolTipText("");
 
-        btnPostarProduto.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        btnPostarProduto.setFont(new java.awt.Font("Bauhaus 93", 0, 14)); // NOI18N
+        btnPostarProduto.setForeground(new java.awt.Color(45, 50, 117));
         btnPostarProduto.setText("Postar Produto");
         btnPostarProduto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnPostarProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +79,8 @@ public class tela extends javax.swing.JFrame {
             }
         });
 
-        btnCancelar.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        btnCancelar.setFont(new java.awt.Font("Bauhaus 93", 0, 14)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(45, 50, 117));
         btnCancelar.setText("Cancelar");
         btnCancelar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +89,8 @@ public class tela extends javax.swing.JFrame {
             }
         });
 
-        btnAdicionarImagem.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        btnAdicionarImagem.setFont(new java.awt.Font("Bauhaus 93", 0, 14)); // NOI18N
+        btnAdicionarImagem.setForeground(new java.awt.Color(45, 50, 117));
         btnAdicionarImagem.setText("Adicionar Imagem");
         btnAdicionarImagem.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnAdicionarImagem.addActionListener(new java.awt.event.ActionListener() {
@@ -98,13 +104,13 @@ public class tela extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(13, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblImagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblPreço)
                             .addComponent(txtNomeMercadoria)
