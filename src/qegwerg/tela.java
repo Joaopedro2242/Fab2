@@ -1,5 +1,7 @@
 package qegwerg;
 
+import DAO.TelaDAO;
+import DTO.TelaDTO;
 import javax.swing.JOptionPane;
 
 public class tela extends javax.swing.JFrame {
@@ -16,10 +18,10 @@ public class tela extends javax.swing.JFrame {
         lblImagem = new javax.swing.JLabel();
         lblNomeMercadoria = new javax.swing.JLabel();
         lblPreço = new javax.swing.JLabel();
-        txtNomeMercadoria = new javax.swing.JTextField();
-        txtPreco = new javax.swing.JTextField();
+        txtNomeProduto = new javax.swing.JTextField();
+        txtPrecoProduto = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtDescrição = new javax.swing.JTextArea();
+        txtDescricaoProduto = new javax.swing.JTextArea();
         lblDescrição = new javax.swing.JLabel();
         btnPostarProduto = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
@@ -38,31 +40,31 @@ public class tela extends javax.swing.JFrame {
 
         lblNomeMercadoria.setFont(new java.awt.Font("Bauhaus 93", 0, 14)); // NOI18N
         lblNomeMercadoria.setForeground(new java.awt.Color(45, 50, 117));
-        lblNomeMercadoria.setText("Nome da Mercadoria");
+        lblNomeMercadoria.setText("Nome do Produto");
 
         lblPreço.setFont(new java.awt.Font("Bauhaus 93", 0, 14)); // NOI18N
         lblPreço.setForeground(new java.awt.Color(45, 50, 117));
         lblPreço.setText("Preço");
 
-        txtNomeMercadoria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtNomeMercadoria.addActionListener(new java.awt.event.ActionListener() {
+        txtNomeProduto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtNomeProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomeMercadoriaActionPerformed(evt);
+                txtNomeProdutoActionPerformed(evt);
             }
         });
 
-        txtPreco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtPreco.addActionListener(new java.awt.event.ActionListener() {
+        txtPrecoProduto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtPrecoProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPrecoActionPerformed(evt);
+                txtPrecoProdutoActionPerformed(evt);
             }
         });
 
-        txtDescrição.setColumns(20);
-        txtDescrição.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        txtDescrição.setRows(5);
-        txtDescrição.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jScrollPane1.setViewportView(txtDescrição);
+        txtDescricaoProduto.setColumns(20);
+        txtDescricaoProduto.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        txtDescricaoProduto.setRows(5);
+        txtDescricaoProduto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jScrollPane1.setViewportView(txtDescricaoProduto);
 
         lblDescrição.setFont(new java.awt.Font("Bauhaus 93", 0, 14)); // NOI18N
         lblDescrição.setForeground(new java.awt.Color(45, 50, 117));
@@ -104,21 +106,21 @@ public class tela extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblImagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblPreço)
-                            .addComponent(txtNomeMercadoria)
+                            .addComponent(txtNomeProduto)
                             .addComponent(lblNomeMercadoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnPostarProduto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnAdicionarImagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtPreco)))
+                            .addComponent(txtPrecoProduto)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(lblDescrição)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -132,11 +134,11 @@ public class tela extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(lblNomeMercadoria)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNomeMercadoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtNomeProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblPreço)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPreco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtPrecoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnAdicionarImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -158,15 +160,29 @@ public class tela extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNomeMercadoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeMercadoriaActionPerformed
+    private void txtNomeProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeProdutoActionPerformed
         
-    }//GEN-LAST:event_txtNomeMercadoriaActionPerformed
+    }//GEN-LAST:event_txtNomeProdutoActionPerformed
 
-    private void txtPrecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrecoActionPerformed
+    private void txtPrecoProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrecoProdutoActionPerformed
         
-    }//GEN-LAST:event_txtPrecoActionPerformed
+    }//GEN-LAST:event_txtPrecoProdutoActionPerformed
 
     private void btnPostarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPostarProdutoActionPerformed
+        String nome_produto, descri_produto, preco_produto;
+        
+        nome_produto = txtNomeProduto.getText();
+        descri_produto = txtDescricaoProduto.getText();
+        preco_produto = txtPrecoProduto.getText();
+        
+        TelaDTO objteladto = new TelaDTO();
+        objteladto.setNome_produto(nome_produto);
+        objteladto.setDescri_produto(descri_produto);
+        objteladto.setPreco_produto(preco_produto);
+        
+        TelaDAO objteladao = new TelaDAO();
+        objteladao.cadastrarProduto(objteladto);
+        
         JOptionPane.showMessageDialog(this, "Salvo com sucesso!","Atenção",JOptionPane.INFORMATION_MESSAGE);
         dispose();
     }//GEN-LAST:event_btnPostarProdutoActionPerformed
@@ -221,8 +237,8 @@ public class tela extends javax.swing.JFrame {
     private javax.swing.JLabel lblImagem;
     private javax.swing.JLabel lblNomeMercadoria;
     private javax.swing.JLabel lblPreço;
-    private javax.swing.JTextArea txtDescrição;
-    private javax.swing.JTextField txtNomeMercadoria;
-    private javax.swing.JTextField txtPreco;
+    private javax.swing.JTextArea txtDescricaoProduto;
+    private javax.swing.JTextField txtNomeProduto;
+    private javax.swing.JTextField txtPrecoProduto;
     // End of variables declaration//GEN-END:variables
 }

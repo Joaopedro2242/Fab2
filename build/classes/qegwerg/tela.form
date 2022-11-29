@@ -47,22 +47,22 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="14" max="32767" attributes="0"/>
+                  <EmptySpace pref="20" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="lblImagem" max="32767" attributes="0"/>
                               <Component id="jScrollPane1" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="9" max="32767" attributes="0"/>
+                          <EmptySpace pref="16" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="lblPreço" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtNomeMercadoria" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtNomeProduto" alignment="0" max="32767" attributes="0"/>
                               <Component id="lblNomeMercadoria" alignment="0" max="32767" attributes="0"/>
                               <Component id="btnPostarProduto" alignment="0" max="32767" attributes="0"/>
                               <Component id="btnCancelar" max="32767" attributes="0"/>
                               <Component id="btnAdicionarImagem" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtPreco" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtPrecoProduto" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -82,11 +82,11 @@
                       <Group type="102" attributes="0">
                           <Component id="lblNomeMercadoria" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtNomeMercadoria" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtNomeProduto" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lblPreço" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtPreco" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPrecoProduto" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="btnAdicionarImagem" min="-2" pref="57" max="-2" attributes="0"/>
                       </Group>
@@ -132,7 +132,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="75" green="32" red="2d" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Nome da Mercadoria"/>
+            <Property name="text" type="java.lang.String" value="Nome do Produto"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblPre&#xe7;o">
@@ -146,7 +146,7 @@
             <Property name="text" type="java.lang.String" value="Pre&#xe7;o"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtNomeMercadoria">
+        <Component class="javax.swing.JTextField" name="txtNomeProduto">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -155,10 +155,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeMercadoriaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeProdutoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtPreco">
+        <Component class="javax.swing.JTextField" name="txtPrecoProduto">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -167,7 +167,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPrecoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPrecoProdutoActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -177,7 +177,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="txtDescri&#xe7;&#xe3;o">
+            <Component class="javax.swing.JTextArea" name="txtDescricaoProduto">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
